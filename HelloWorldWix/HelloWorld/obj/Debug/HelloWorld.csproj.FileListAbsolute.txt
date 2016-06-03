@@ -1,5 +1,1 @@
-D:\Hello-world\HelloWorldWix\HelloWorld\bin\Debug\HelloWorld.exe.config
-D:\Hello-world\HelloWorldWix\HelloWorld\bin\Debug\HelloWorld.exe
-D:\Hello-world\HelloWorldWix\HelloWorld\bin\Debug\HelloWorld.pdb
-D:\Hello-world\HelloWorldWix\HelloWorld\obj\Debug\HelloWorld.exe
-D:\Hello-world\HelloWorldWix\HelloWorld\obj\Debug\HelloWorld.pdb
+D:\IRIS\Testing-Chef\HelloWorldWix\HelloWorld\bin\Debug\HelloWorld.exe.config
