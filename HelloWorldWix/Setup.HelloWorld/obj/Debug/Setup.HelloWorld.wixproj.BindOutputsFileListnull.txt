@@ -1,0 +1,2 @@
+D:\Hello-world\HelloWorldWix\Setup.HelloWorld\bin\Debug\Setup.HelloWorld.msi
+D:\Hello-world\HelloWorldWix\Setup.HelloWorld\bin\Debug\Setup.HelloWorld.wixpdb

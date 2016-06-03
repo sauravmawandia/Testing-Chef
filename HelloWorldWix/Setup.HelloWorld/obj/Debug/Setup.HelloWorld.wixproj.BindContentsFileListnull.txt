@@ -1,0 +1,1 @@
+..\..\\HelloWorldWix\HelloWorld\bin\Debug\HelloWorld.exe

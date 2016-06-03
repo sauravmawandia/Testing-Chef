@@ -4,15 +4,12 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>3.10</ProductVersion>
-    <ProjectGuid>8c70404d-97f6-444e-8055-9f0dc34b8fc0</ProjectGuid>
+    <ProjectGuid>1cd4b72f-901d-4f7d-bfe8-0b3fc3b81ac8</ProjectGuid>
     <SchemaVersion>2.0</SchemaVersion>
-    <OutputName>HelloWorld.Setup</OutputName>
+    <OutputName>Setup.HelloWorld</OutputName>
     <OutputType>Package</OutputType>
     <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' AND '$(MSBuildExtensionsPath32)' != '' ">$(MSBuildExtensionsPath32)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
     <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
-    <!-- custom properties -->
-    <BuildCommonDir Condition=" '$(BuildCommonDir)' == ''">..\..\..\DeliveryCommon\BuildCommon\\</BuildCommonDir>
-    <DefineConstants>ProductName=$(OutputName);BuildCommonDir=$(BuildCommonDir)</DefineConstants>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <OutputPath>bin\$(Configuration)\</OutputPath>
@@ -26,27 +23,7 @@
   <ItemGroup>
     <Compile Include="Product.wxs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HelloWorld\HelloWorld.csproj">
-      <Name>HelloWorld</Name>
-      <Project>{ef71baf3-5ae5-4108-9d8f-004826dbc647}</Project>
-      <Private>True</Private>
-      <DoNotHarvest>True</DoNotHarvest>
-      <RefProjectOutputGroups>Binaries;Content;Satellites</RefProjectOutputGroups>
-      <RefTargetDir>INSTALLFOLDER</RefTargetDir>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WixExtension Include="WixIIsExtension">
-      <HintPath>$(WixExtDir)\WixIIsExtension.dll</HintPath>
-      <Name>WixIIsExtension</Name>
-    </WixExtension>
-  </ItemGroup>
   <Import Project="$(WixTargetsPath)" />
-  <Import Project="$(BuildCommonDir)WixCommon.proj" />
-  <Target Name="BeforeBuild">
-    <CallTarget Targets="PackageAndHarvestReferencedProject" />
-  </Target>
   <!--
 	To modify your build process, add your task inside one of the targets below and uncomment it.
 	Other similar extension points exist, see Wix.targets.
